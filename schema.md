@@ -28,3 +28,13 @@ quand on voudra selectionn tous les 'plat_malagasy', vary amin'ny anana sera oub
 
 Explication: il faut placer la quantité dans la liste des plats car à chaque plat est associé sa quantié
 
+# Etape 4:
+
+## les tables:
+
+- CLIENT (**id_client**, nom)
+- COMMANDE(**id_commande**, date, #id_client?)
+
+Explication: OUI, la clé étrangère doit etre null pour pouvoir dire qu'un client est de passage et ainsi reconnaitre les clients fidèle.
+
+Il faut aussi utiliser un LEFT JOIN pour ne pas perdre les client null dans commmande, car JOIN est enfaite un INNER JOIN qui retire les valeurs NULL
