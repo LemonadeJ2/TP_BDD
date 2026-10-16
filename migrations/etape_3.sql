@@ -1,0 +1,24 @@
+CREATE TABLE COMMANDE(
+    id_commande INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    date DATE
+);
+
+CREATE TABLE COMMANDE_LIST(
+    id_commande_list INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_commande INT NOT NULL,
+    id_plat INT NOT NULL,
+    qte INT NOT NULL, 
+    FOREIGN KEY(id_commande) REFERENCES COMMANDE(id_commande),
+    FOREIGN KEY(id_plat) REFERENCES PLAT(id_plat)
+);
+
+INSERT INTO COMMANDE (date) VALUES 
+('13/09/2026'),
+('16/09/2026');
+
+INSERT INTO COMMANDE_LIST(id_commande, id_plat, qte) VALUES
+(1,3,2),
+(1,5,2),
+(2,1,1),
+(2,2,1),
+(2,4,2);

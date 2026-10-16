@@ -18,3 +18,13 @@ Exemple:
 - plat (1, vary amin'ny anana, 1000, plat gasy)
 
 quand on voudra selectionn tous les 'plat_malagasy', vary amin'ny anana sera oublié car écrit d'une différente manière. Là ou une table fera en sorte que tout soit homogène
+
+# Etape 3:
+
+## les tables;
+
+- COMMANDE ( **id_commande**, date )
+- COMMANDE_LIST(**id_commande_list**, #id_commande, #id_plat, qte)
+
+Explication: il faut placer la quantité dans la liste des plats car à chaque plat est associé sa quantié
+
