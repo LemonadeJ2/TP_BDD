@@ -24,3 +24,10 @@ LEFT JOIN CLIENT cli ON c.id_client = cli.id_client
 GROUP BY c.id_commande, cli.nom 
 ORDER BY c.id_client ASC;
 
+-- Etape 5
+
+SELECT s.nom, SUM(p.prix * cl.qte) as Chiffre_affaire FROM
+COMMANDE c JOIN COMMANDE_LIST cl ON cl.id_commande = c.id_commande
+JOIN PLAT p ON p.id_plat = cl.id_plat
+JOIN SERVEUR s ON c.id_serveur = s.id_serveur
+GROUP BY s.id_serveur;

@@ -38,3 +38,14 @@ Explication: il faut placer la quantité dans la liste des plats car à chaque p
 Explication: OUI, la clé étrangère doit etre null pour pouvoir dire qu'un client est de passage et ainsi reconnaitre les clients fidèle.
 
 Il faut aussi utiliser un LEFT JOIN pour ne pas perdre les client null dans commmande, car JOIN est enfaite un INNER JOIN qui retire les valeurs NULL
+
+# Etape 5:
+
+## les tables;
+- TABLES (**id_table**, numero_table)
+- SERVEUR(**id_serveur**, nom, prenom)
+- ALTER TABLE COMMANDE(**id_commande**, date, #id_client?, #id_table, #id_serveur, emportee)
+
+Explication: Une table de la salle et une commande sont deux choses différentes car une table peut contenir plusieurs commande là ou une commande est associé à une seule table.
+
+Oui le nom table pose problème en SQL car elle est confondue avec la commande pour créer des tables.
